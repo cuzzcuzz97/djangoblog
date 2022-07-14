@@ -15,3 +15,7 @@ class BlogDetail(DetailView):
     model = Blog
     context_object_name = 'blog'
     template_name = 'base/blog.html'
+    def image(request):
+        img = Photo.objects.all()
+        return render_to_response("blog.html", {"img": img})
+

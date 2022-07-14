@@ -1,12 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User 
 from django.forms import BooleanField, CharField
+from ckeditor.fields import RichTextField
+from tinymce.models import HTMLField
+from tinymce import models as tinymce_models
+
 # Create your models here.
 
 class Blog(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True,blank=True)
     title = models.CharField(max_length=200, null = True, blank = True)
-    description = models.TextField(max_length=1000000, null = True, blank = True)
+    description = HTMLField( null = True, blank = True)
     published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     upload_image = models.ImageField(null=True,blank=True)
@@ -15,4 +19,4 @@ class Blog(models.Model):
         return self.title
     
     class Meta:
-        ordering = ['created_at']
+        ordering = ['-created_at']

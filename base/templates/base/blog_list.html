@@ -8,8 +8,24 @@
     height: 15vw;
     object-fit: cover;
 }
+
 .card {
+    flex: 1 0 33% !important; 
     width: 50%;
+}
+.card:first-child {
+
+    flex: 1 1 100% !important;
+}
+/* .card:not(:first-child) {
+  flex: 1;
+} */
+
+@media (min-width: 576px) {
+.card-group>.card:first-child .card-header, .card-group>.card:first-child .card-img-top {
+    border-top-right-radius: 0;
+    height: 50vh;
+}
 }
 @media only screen and (max-width: 900px) {
   .card {
@@ -27,7 +43,7 @@
     .card-img-top {
     height: 40vw;
 }
-
+}
 /* @include media-breakpoint-down(md) { 
     .card-group {
     -webkit-box-orient: horizontal;
@@ -47,7 +63,7 @@
         <img src="{{blog.upload_image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
             <a href="{% url 'blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
-            <p class="card-text">{{blog.description|truncatechars:255 }}</p>
+            <p class="card-text">{{blog.description|truncatechars:255|safe }}</p>
             <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p>
         </div>
     </div> 
