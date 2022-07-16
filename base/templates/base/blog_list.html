@@ -10,7 +10,10 @@
     <!-- CSS only -->
 <style>
 
-
+a , a:hover {
+    text-decoration: none;
+    color: black;
+}
 .carousel-caption {
     background-color: rgba(0,0,0,.7);
     left:0;
@@ -140,7 +143,7 @@
         <div class="card-body">
             <a href="{% url 'blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
             <!-- <p class="card-text">{{blog.description|truncatechars:100|safe }}</p> -->
-            <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p>
+            <!-- <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p> -->
         </div>
     </div> 
 {% endfor %}
