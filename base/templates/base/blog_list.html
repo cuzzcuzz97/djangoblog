@@ -13,6 +13,8 @@
 
 .carousel-caption {
     background-color: rgba(0,0,0,.7);
+    left:0;
+    right:0;
 }
 .container {
     max-width: 1000px !important;
@@ -28,7 +30,6 @@
     flex: 1 0 30% !important; 
     width: 30%;
     margin:10px !important;
-    border: 1px solid rgba(0,0,0,2) !important;
     border-radius: 5px !important;
 }
 /* .card:first-child {
@@ -51,6 +52,7 @@
   .card {
       width: 100%;
       margin-left: 0 !important;
+      flex-direction: row;
   }
 
 }
@@ -62,7 +64,8 @@
         flex-direction: column !important ;
     }
     .card-img-top {
-    height: 40vw;
+    height: 20vh;
+    width: 30vw;
 }
 }
 /* @include media-breakpoint-down(md) { 
@@ -136,7 +139,7 @@
         <img src="{{blog.upload_image.url}}" class="card-img-top" alt="...">
         <div class="card-body">
             <a href="{% url 'blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
-            <p class="card-text">{{blog.description|truncatechars:100|safe }}</p>
+            <!-- <p class="card-text">{{blog.description|truncatechars:100|safe }}</p> -->
             <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p>
         </div>
     </div> 
