@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'base.apps.BaseConfig',
     'tinymce',
 
-    'storages',
+    # 'storages',
 ]
 
 
