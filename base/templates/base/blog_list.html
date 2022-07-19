@@ -33,8 +33,25 @@ a , a:hover {
     flex: 1 0 30% !important; 
     width: 30%;
     margin:10px !important;
-    border-radius: 5px !important;
+    border-radius: 10px !important;
+    border: none;
 }
+
+.card img {
+    border-radius: 10px !important;
+}
+
+.card-body {
+  padding: 0 !important;
+  padding-top: 1.25rem !important;
+}
+
+.card-group {
+  background-color: white;
+  padding: 10px !important;
+
+}
+
 /* .card:first-child {
 
     flex: 1 1 100% !important;
@@ -47,7 +64,6 @@ a , a:hover {
 @media (min-width: 576px) {
 /* .card-group>.card:first-child .card-header, .card-group>.card:first-child .card-img-top {
     border-top-right-radius: 0;
-    height: 50vh;
     border: auto;
 } */
 }
@@ -86,7 +102,7 @@ a , a:hover {
 <!-- <div class="container d-flex flex-wrap align-items-center"> -->
 <!-- Carousel -->
 
-
+<div class="shadow p-3 mb-5 bg-white rounded">
 <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
     <!-- Indicators/dots -->
@@ -135,11 +151,11 @@ a , a:hover {
   </div>
   
 
-<div class="card-group">
+<div class="card-group ">
 
 {% for blog in blogs %}
     <div class="card mb-3 mt-5 ">
-        <img src="{{blog.upload_image.url}}" class="card-img-top" alt="...">
+        <a href="{% url 'blog' blog.id %}"><img src="{{blog.upload_image.url}}" class="card-img-top" alt="..."></a>
         <div class="card-body">
             <a href="{% url 'blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
             <!-- <p class="card-text">{{blog.description|truncatechars:100|safe }}</p> -->
@@ -147,6 +163,7 @@ a , a:hover {
         </div>
     </div> 
 {% endfor %}
+</div>
 </div>
 
 <!-- </div> -->
