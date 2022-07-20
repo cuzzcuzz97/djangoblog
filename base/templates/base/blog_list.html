@@ -65,6 +65,7 @@
 </div>
         <div class="card-group">
             {% for blog in blogs %}
+            {% if forloop.counter <= 6 %}
             <div class="card bg-light mb-3 mt-5 ">
               <a href="{% url 'blog' blog.id %}"><img src="{{blog.upload_image.url}}" class="card-img-top" alt="..."></a>
             <div class="card-body">
@@ -72,9 +73,17 @@
             <!-- <p class="card-text">{{blog.description|truncatechars:100|safe }}</p> -->
             <!-- <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p> -->
             </div>
-            </div> 
+          </div> 
+            {% endif %}
             {% endfor %}
-        </div>
+</div>
+
+<div class="categories-box">
+    <ul>
+      <li class="category">box 1</li>
+      <li class="category">box 1</li>
+      <li class="category">box 1</li>
+    </ul>
 </div>
 <!-- end body-container -->
 
