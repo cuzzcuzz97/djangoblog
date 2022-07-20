@@ -32,7 +32,7 @@
         <a href="{% url 'blog' blog.id %}"><img src="{{blog.upload_image.url}}" alt=" class="d-block" style="width: 100%;
         height: 400px;"></a>
         <div class="carousel-caption">
-          <h4>{{blog.title}}</h4>
+          <h3>{{blog.title}}</h3>
           <p>{{blog.description|truncatechars:150|safe }}</p>
         </div>
       </div>
@@ -42,11 +42,10 @@
             <a href="{% url 'blog' blog.id %}"><img src="{{blog.upload_image.url}}" alt=" class="d-block" style="width: 100%;
             height: 400px;"></a>
             <div class="carousel-caption">
-            <h4>{{blog.title}}</h4>
+            <h3>{{blog.title}}</h3>
             <p>{{blog.description|truncatechars:150|safe }}</p>
             </div>
         </div>
-
         {% endif %}
       {% endif %}
       {% endfor %}
@@ -60,7 +59,6 @@
       <span class="carousel-control-next-icon"></span>
     </button>
 </div>
-
 <div class="text-field mt-5">
   <h5>More news with Cheetah<br></h5>
   <p>Make a cup of coffee and chill!!<p></p>
