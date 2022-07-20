@@ -14,13 +14,18 @@ a , a:hover {
 #header-slide {
   margin-top: 20px;
 }
+.double-carroseul {
+  display: flex;
+}
 
 .body-container {
   margin: auto 100px 0 100px;     
 }
-
+.carousel-inner {
+}
 .carousel-caption {
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,1);
+    bottom: 0;
     left:0;
     right:0;
 }
@@ -53,6 +58,11 @@ a , a:hover {
 
 }
 
+.carousel-item img {
+  object-fit: cover !important;
+}
+
+
 .text-field {
   text-align: center;
   align-items: center;
@@ -65,6 +75,7 @@ a , a:hover {
     padding-top: 1.25rem !important;
 
   }
+
 }
 @media only screen and (max-width: 900px) {
   .card {
