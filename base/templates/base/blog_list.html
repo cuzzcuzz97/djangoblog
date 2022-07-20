@@ -11,10 +11,11 @@
 </head>
     <!-- CSS only -->
 
-
+<!-- start container all body -->
+<div class="">
 <!-- <div class="container d-flex flex-wrap align-items-center"> -->
 <!-- Carousel -->
-<div id="header-slide" class="shadow p-3 mb-5 bg-white rounded">
+<div id="header-slide" class=" bg-light p-3 mb-5 rounded">
 <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
@@ -60,21 +61,23 @@
       <span class="carousel-control-next-icon"></span>
     </button>
 </div>
+<div class="text-field mt-5">
+  <h5>More news with Cheetah<br></h5>
+  <p>Make a cup of coffee and chill!!<p></p>
 </div>
-<div class="container">
-    <div class="card-group ">
-    {% for blog in blogs %}
-    <div class="card mb-3 mt-5 ">
-      <a href="{% url 'blog' blog.id %}"><img src="{{blog.upload_image.url}}" class="card-img-top" alt="..."></a>
-    <div class="card-body">
-      <a href="{% url 'blog' blog.id %}"><h5 class="card-title">{{blog.title}}</h5></a>
-    <!-- <p class="card-text">{{blog.description|truncatechars:100|safe }}</p> -->
-    <!-- <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p> -->
-    </div>
-    </div> 
-    {% endfor %}
-    </div>
-
-<!-- </div> -->
+        <div class="card-group">
+            {% for blog in blogs %}
+            <div class="card bg-light mb-3 mt-5 ">
+              <a href="{% url 'blog' blog.id %}"><img src="{{blog.upload_image.url}}" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+              <a href="{% url 'blog' blog.id %}"><h6 class="card-title">{{blog.title}}</h6></a>
+            <!-- <p class="card-text">{{blog.description|truncatechars:100|safe }}</p> -->
+            <!-- <p class="card-text"><small class="text-muted">{{blog.created_at}}</small></p> -->
+            </div>
+            </div> 
+            {% endfor %}
+        </div>
+</div>
+<!-- end body-container -->
 
 {% endblock content %}

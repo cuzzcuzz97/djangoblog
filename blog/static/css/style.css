@@ -4,8 +4,19 @@ a , a:hover {
     color: black;
 }
 
+.body-container {
+  font-size: 16px;
+}
+
+.card-title {
+}
+
 #header-slide {
   margin-top: 20px;
+}
+
+.body-container {
+  margin: auto 100px 0 100px;     
 }
 
 .carousel-caption {
@@ -29,21 +40,24 @@ a , a:hover {
     margin:10px !important;
     border-radius: 10px !important;
     border: none;
+    background-color: none;
 }
 
 .card img {
     border-radius: 10px !important;
 }
 
-.card-body {
-}
 
 .card-group {
-  background-color: white;
   padding: 10px !important;
 
 }
 
+.text-field {
+  text-align: center;
+  align-items: center;
+  padding: 20px;
+}
 
 @media (min-width: 576px) {
   .card-body {
@@ -58,6 +72,10 @@ a , a:hover {
       margin-left: 0 !important;
       flex-direction: row;
   }
+  .card-img-top {
+    height: 20vh;
+    width: 30vw;
+}
 
 }
 @media (max-width: 900px){
@@ -75,8 +93,5 @@ a , a:hover {
     .card {
 
     }
-    .card-img-top {
-    height: 20vh;
-    width: 30vw;
-}
+
 }
