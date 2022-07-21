@@ -13,7 +13,7 @@ class Blog(models.Model):
     description = HTMLField( null = True, blank = True)
     published = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    upload_image = models.ImageField(null=True,blank=True)
+    upload_image = models.ImageField(null=True,blank=False)
 
     def __str__(self):
         return self.title
