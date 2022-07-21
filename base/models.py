@@ -20,3 +20,15 @@ class Blog(models.Model):
     
     class Meta:
         ordering = ['-created_at']
+
+class Coinlist(models.Model):
+    COIN_NAME = [('BTC', 'BTCUSDT'),
+    ('ETH', 'ETHUSDT'),
+    ('BNB', 'BNBUSDT'),
+    ('ADA', 'ADAUSDT'),
+    ('LTC', 'LTCUSDT'),]
+
+    coinname = models.CharField(max_length=3, choices=COIN_NAME,default="BTC")
+
+    def __str__(self):
+        return self.coinname

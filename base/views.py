@@ -4,8 +4,9 @@ from django.views.generic.detail import DetailView
 from django.views.generic.list import ListView
 from django.shortcuts import redirect, render
 import json
-import requests
+# import requests
 import time
+
 
 class BlogList(ListView):
     model = Blog
@@ -22,19 +23,28 @@ class BlogDetail(DetailView):
         img = Photo.objects.all()
         return render_to_response("blog.html", {"img": img})
 
-def get_currency(request):
-    
-    # defining key/request url
-    key = "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"
-    
-    # requesting data from url
+# def mmdv(request):
+#     coindisplay = Coinlist.objects.all()
+#     return render(request, "blog_list.html", {"Coinlist": coindisplay})
 
-    data = requests.get(key)  
-    data = data.json()
+# class Coinlist(ListView):
+#     model = Coinlist
+#     context_object_name = 'coins'
 
-    def print_price():
-        return data['price']
-       
-    context = {'bitcoin' : print_price}
-    time.sleep(10)
-    return render(request , 'base/main.html', context)
+
+
+    # def get_currency(request):
+
+    #     key = "https://api.binance.com/api/v3/ticker/24hr"
+
+    #     def print_price(coinname):
+    #         data = requests.get(key)
+    #         data = data.json()
+    #         price = next(z for z in data if z["symbol"] == f"{coinname}")
+    #         coin_price = price.get("lastPrice")
+    #         return coin_price
+    #     token_price = print_price("BTCUSDT")
+
+    #     context = {'bitcoin' : token_price }
+
+    #     return render(request , 'blog_list.html', context)

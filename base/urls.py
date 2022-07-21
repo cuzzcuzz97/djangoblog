@@ -7,7 +7,6 @@ from . import views
 urlpatterns = [
     path('', BlogList.as_view(),name='blogs'),
     path('blog/<int:pk>', BlogDetail.as_view(), name='blog'),
-    path('get_currency/', views.get_currency),
     path('tinymce/', include('tinymce.urls')),
 
 ]

@@ -12,10 +12,29 @@
     <!-- CSS only -->
 
 <!-- start container all body -->
-<div class="">
+<div class="body-contain">
+  <div class="header">
+    <div class="header-title">
+      <h1 >Tin tức về Bitcoin mỗi ngày !</h1>
+      <h3>tham gia để nhận tin tức sớm nhất từ đội ngũ Cheetah</h3><br>
+      <a id="register" href="#">Đăng kí</a>
+    </div>
+    <div class="price-table">
+      <ul>
+        {%for coin in coindisplay %}
+        <li>{{coin.coinname}}<br></li>
+        {%endfor%}
+        <li>ETH<br>1203</li>
+        <li>BNB<br>123</li>
+        <li>BNB<br>123</li>
+        <li>BNB<br>123</li>
+        <li>BNB<br>123</li>
+      </ul>
+    </div>
+</div>
 <!-- <div class="container d-flex flex-wrap align-items-center"> -->
 <!-- Carousel -->
-<div id="header-slide" class=" bg-light p-3 mb-5 rounded">
+<div id="header-slide" class=" bg-light mb-5 rounded">
 <div id="demo" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <!-- Indicators/dots -->
     <div class="carousel-indicators">
@@ -63,6 +82,7 @@
   <h5>More news with Cheetah<br></h5>
   <p>Make a cup of coffee and chill!!<p></p>
 </div>
+<div class="cards-group">
         <div class="card-group">
             {% for blog in blogs %}
             {% if forloop.counter <= 6 %}
@@ -77,13 +97,13 @@
             {% endif %}
             {% endfor %}
 </div>
-
 <div class="categories-box">
     <ul>
       <li class="category">box 1</li>
       <li class="category">box 1</li>
       <li class="category">box 1</li>
     </ul>
+</div>
 </div>
 <!-- end body-container -->
 

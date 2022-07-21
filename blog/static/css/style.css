@@ -4,16 +4,15 @@ a , a:hover {
     color: black;
 }
 
-.body-container {
-  font-size: 16px;
-}
-
-.card-group {
+.body-contain {
   width: 80%;
   margin: auto;
 }
+
+.card-group {
+  margin: auto;
+}
 .categories-box ul {
-  width: 80%;
   margin: auto;
   padding:0;
   display: flex;
@@ -39,7 +38,6 @@ a , a:hover {
 }
 
 #demo {
-  width:80%;
   margin: auto;
 }
 
@@ -91,6 +89,28 @@ a , a:hover {
   object-fit: cover !important;
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.price-table ul {
+  padding-inline-start: 0 !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.price-table li {
+  list-style-type: none;
+}
+#register {
+  padding: 10px 20px;
+  background-color: rgb(2, 181, 251);
+  color: black;
+
+}
 
 .text-field {
   text-align: center;
@@ -111,6 +131,9 @@ a , a:hover {
       width: 100%;
       margin-left: 0 !important;
       flex-direction: row;
+  }
+  .body-contain {
+    width: 100%;
   }
   .card-img-top {
     height: 20vh;
